@@ -20,14 +20,16 @@ font-size: 100%;
 /* font: inherit;   */
 vertical-align: baseline;  
 }
-
+/* html {
+    font-size:62.5%;
+} */
 /* Start of general styling */
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     max-width: 100%;
-    /* border: 1px solid pink; */
+    /* border: 1px solid blueviolet; */
     font-family: 'Open Sans', sans-serif;
 }
 /* End of general styling */
@@ -55,7 +57,9 @@ header {
     color: #c57021;
     text-decoration: none;
 }
+/* End of header styling */
 
+/* Start of hero section styling */
 .hero-section {
     height: 60vh;
     display: flex;
@@ -74,9 +78,7 @@ header {
     background-position: center;
     background-attachment: fixed;
 }
-/* End of header styling */
 
-/* Start of body styling*/
 .first-last h1 {
     font-size: 1.5rem;
 }
@@ -104,7 +106,7 @@ i {
     background-color: #c57021;
     padding: 15px;
     border-radius: 5px;
-    margin: 18px;
+    margin: 18px auto;
 }
 /* Make sure each page (about, contact, etc) has a 'navbar' class in the header */
 .navbar {
@@ -113,6 +115,9 @@ i {
     width: 100%;
     background-color: white;
 }
+/* End of hero section styling */
+
+/* Start of body styling*/
 #projects {
     display: flex;
     flex-direction: row;
@@ -124,34 +129,60 @@ i {
 .project {
     width: 30%;
     padding-bottom: 20px;
-    text-align: center;
+    margin-top: 2%;
 }
+
 .project p {
     padding-top: 6px;
+    text-align: center;
 }
+
 .project-image {
     width: 100%;
     height: 180px; 
     object-fit: cover;
     border-radius: 5px;
 }
-.button-footer {
-    background-color: #c57021;
-    padding: 15px;
-    border-radius: 5px;
-    margin: 18px auto;
-    width: 14%;
-    text-align: center;
-}
-.button-footer a {
-    color: #FFFFFF;
-    text-decoration: none;
-    letter-spacing: 1.5px;
-}
+/* End of body styling*/
+
+/* Start of footer styling */
 footer {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: 0 auto;
     height: 200px;
     background-color: #f2d0c4;
     align-items: center;
 }
+footer nav{
+    width:80%;
+    display:flex;
+    justify-content:center;
+}
+.socials {
+    width: 100%;
+}
+.socials a {
+   padding: 0 2% 2% 2%; 
+}
+/* End of footer styling */
+
+/* Start of Media queries for breakpoints: 800px and 500px */
+@media (max-width: 800px) {
+    .project {
+        display:flex;
+        flex-wrap: wrap;
+        width: 45%;
+    }
+    .nav-links {
+        width: 60%;
+    }
+}
+
+@media (max-width: 500px){
+    .nav-links {
+        width: 60%;
+    }
+}
+/* End of Media queries for breakpoints: 800px and 500px */
